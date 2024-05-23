@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Producto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Coocakes</h1>
+        </header>
+        <main>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/06/d3/e8/06d3e82eb975dd973897f1dd124741fb.jpg"alt="Producto" class="product-image">
+                <div class="product-details">
+                    <h2>SUPER RICAS</h2>
+                    <p class="description">GALLETAS PARA TODO EL DIA</p>
+                    <p class="price">$50.99</p>
+                    <button class="buy-button" onclick="buyProduct()">Comprar Ahora</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Mi Tienda. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script src="Screenshot 2024-05-22 at 11.30.12 a.m..jpeg"></script>
+</body>
+</html>
+
+body {
+    font-family: 'Roboto', 'Lato', sans-serif;/* Aplicar cursiva a la descripción */
+    font-style: italic;/* Aplicar cursiva a la descripción */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffebf0; /* Color de fondo rosa claro */
+    color: #ff69b4; /* Color de texto rosa */
+}
+
+.container {
+    width: 1000%;
+    max-width: 900px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-details {
+    max-width: 500px;
+}
+
+h1, h2 {
+    color: #ff69b4; /* Color de texto rosa */
+}
+
+.description {
+    font-size: 1.1em;italic; /* Aplicar cursiva a la descripción */
+    color: #ff69b4; /* Color de texto rosa */
+   
+}
+
+.price {
+    font-size: 1.5em;
+    color: #ff1493; /* Rosa más oscuro para destacar el precio */
+    margin: 10px 0;
+}
+
+.buy-button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.buy-button:hover {
+    background-color: #ff1493;
+}
+
+
+function showTime() {
+	document.getElementById('currentTime').innerHTML = new Date().toUTCString();
+}
+showTime();
+setInterval(function () {
+	showTime();
+}, 1000);
